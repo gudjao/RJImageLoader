@@ -16,7 +16,7 @@
 {
     RJCircularLoaderView *loaderView = objc_getAssociatedObject(self, @selector(rj_circularLoaderView));
     if (!loaderView) {
-        loaderView = [RJCircularLoaderView new];
+        loaderView = [[RJCircularLoaderView alloc] initWithFrame:self.bounds];
         loaderView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         objc_setAssociatedObject(self, @selector(rj_circularLoaderView), loaderView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
